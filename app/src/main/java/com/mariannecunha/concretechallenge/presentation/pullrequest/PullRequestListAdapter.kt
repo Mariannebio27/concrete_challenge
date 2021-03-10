@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.presentation
+package com.mariannecunha.concretechallenge.presentation.pullrequest
 
 import android.content.Intent
 import android.net.Uri
@@ -30,7 +30,9 @@ class PullRequestListAdapter() : RecyclerView.Adapter<PullRequestListAdapter.Pul
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.pull_request_list_item, parent, false)
 
-        return PullRequestListAdapter.PullRequestListViewHolder(itemView)
+        return PullRequestListViewHolder(
+            itemView
+        )
     }
 
     override fun getItemCount(): Int {

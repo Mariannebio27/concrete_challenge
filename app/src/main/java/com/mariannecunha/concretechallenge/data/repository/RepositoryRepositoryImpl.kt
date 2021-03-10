@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.data
+package com.mariannecunha.concretechallenge.data.repository
 
 import com.github.kittinunf.result.coroutines.SuspendableResult
 import com.mariannecunha.concretechallenge.domain.model.GlobalRepository

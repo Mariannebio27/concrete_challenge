@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.presentation
+package com.mariannecunha.concretechallenge.presentation.repository
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariannecunha.concretechallenge.R
 import com.mariannecunha.concretechallenge.extension.setupScroll
+import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListAdapter
+import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListViewModel
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

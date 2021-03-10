@@ -1,10 +1,9 @@
-package com.mariannecunha.concretechallenge.presentation
+package com.mariannecunha.concretechallenge.presentation.pullrequest
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mariannecunha.concretechallenge.data.PullRequestRepositoryImpl
 import com.mariannecunha.concretechallenge.domain.model.PullRequest
 import com.mariannecunha.concretechallenge.domain.model.Repository
 import com.mariannecunha.concretechallenge.domain.usecase.FetchPullRequests

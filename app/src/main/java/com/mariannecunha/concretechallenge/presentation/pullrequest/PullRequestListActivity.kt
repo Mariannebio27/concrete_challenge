@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.presentation
+package com.mariannecunha.concretechallenge.presentation.pullrequest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

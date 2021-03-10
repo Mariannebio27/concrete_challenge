@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.data
+package com.mariannecunha.concretechallenge.data.repository
 
 import com.mariannecunha.concretechallenge.domain.model.GlobalRepository
 import retrofit2.http.GET

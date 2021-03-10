@@ -1,9 +1,9 @@
 package com.mariannecunha.concretechallenge.data.di
 
-import com.mariannecunha.concretechallenge.data.PullRequestRepositoryImpl
-import com.mariannecunha.concretechallenge.data.PullRequestService
-import com.mariannecunha.concretechallenge.data.RepositoryRepositoryImpl
-import com.mariannecunha.concretechallenge.data.RepositoryService
+import com.mariannecunha.concretechallenge.data.pullrequest.PullRequestRepositoryImpl
+import com.mariannecunha.concretechallenge.data.pullrequest.PullRequestService
+import com.mariannecunha.concretechallenge.data.repository.RepositoryRepositoryImpl
+import com.mariannecunha.concretechallenge.data.repository.RepositoryService
 import com.mariannecunha.concretechallenge.domain.repository.PullRequestRepository
 import com.mariannecunha.concretechallenge.domain.repository.RepositoryRepository
 import okhttp3.OkHttpClient

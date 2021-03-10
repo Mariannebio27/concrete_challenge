@@ -1,13 +1,11 @@
 package com.mariannecunha.concretechallenge.presentation.di
 
-import com.mariannecunha.concretechallenge.data.PullRequestRepositoryImpl
-import com.mariannecunha.concretechallenge.data.RepositoryRepositoryImpl
 import com.mariannecunha.concretechallenge.domain.usecase.FetchPullRequests
 import com.mariannecunha.concretechallenge.domain.usecase.FetchRepositories
-import com.mariannecunha.concretechallenge.presentation.PullRequestListAdapter
-import com.mariannecunha.concretechallenge.presentation.PullRequestListViewModel
-import com.mariannecunha.concretechallenge.presentation.RepositoryListAdapter
-import com.mariannecunha.concretechallenge.presentation.RepositoryListViewModel
+import com.mariannecunha.concretechallenge.presentation.pullrequest.PullRequestListAdapter
+import com.mariannecunha.concretechallenge.presentation.pullrequest.PullRequestListViewModel
+import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListAdapter
+import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

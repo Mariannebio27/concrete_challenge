@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.presentation
+package com.mariannecunha.concretechallenge.presentation.repository
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mariannecunha.concretechallenge.R
 import com.mariannecunha.concretechallenge.domain.model.Repository
-import com.mariannecunha.concretechallenge.presentation.PullRequestListActivity.Companion.REPOSITORY_KEY
+import com.mariannecunha.concretechallenge.presentation.pullrequest.PullRequestListActivity
+import com.mariannecunha.concretechallenge.presentation.pullrequest.PullRequestListActivity.Companion.REPOSITORY_KEY
 import de.hdodenhof.circleimageview.CircleImageView
 
 class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.RepositoryListViewHolder>() {
@@ -27,7 +28,9 @@ class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.Repos
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.repository_list_item, parent, false)
 
-        return RepositoryListViewHolder(itemView)
+        return RepositoryListViewHolder(
+            itemView
+        )
     }
 
     override fun getItemCount(): Int {
