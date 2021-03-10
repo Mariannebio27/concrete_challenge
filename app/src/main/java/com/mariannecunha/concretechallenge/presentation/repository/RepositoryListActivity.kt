@@ -18,16 +18,15 @@ class RepositoryListActivity : AppCompatActivity() {
 
     private val viewModel by viewModel<RepositoryListViewModel>()
     private val adapter by inject<RepositoryListAdapter>()
-    private lateinit var repositoryRecyclerView: RecyclerView
-    private lateinit var layoutManager : LinearLayoutManager
-    private lateinit var repositoryProgressBar: ProgressBar
+    private val repositoryRecyclerView: RecyclerView by lazy { findViewById(R.id.repository_recycler_view) }
+    private val layoutManager : LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
+    private val repositoryProgressBar: ProgressBar by lazy { findViewById(R.id.repository_progress_bar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repository_list)
 
         setUpRecyclerView()
-        setUpProgressBar()
         setUpObserver()
     }
 
@@ -38,8 +37,6 @@ class RepositoryListActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerView() {
-        repositoryRecyclerView = findViewById(R.id.repository_recycler_view)
-        layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         repositoryRecyclerView.setHasFixedSize(true)
         repositoryRecyclerView.layoutManager = layoutManager
         repositoryRecyclerView.adapter = adapter
@@ -50,10 +47,6 @@ class RepositoryListActivity : AppCompatActivity() {
                 viewModel.getRepositories()
             }
         )
-    }
-
-    private fun setUpProgressBar() {
-        repositoryProgressBar = findViewById(R.id.repository_progress_bar)
     }
 
     private fun setUpObserver() {

@@ -17,16 +17,15 @@ class PullRequestListActivity : AppCompatActivity() {
     private val viewModel by viewModel<PullRequestListViewModel>()
     private val adapter by inject<PullRequestListAdapter>()
     private var repository: Repository? = null
-    private lateinit var pullRequestRecyclerView: RecyclerView
-    private lateinit var layoutManager: LinearLayoutManager
-    private lateinit var pullRequestProgressBar: ProgressBar
+    private val pullRequestRecyclerView: RecyclerView by lazy { findViewById(R.id.pull_request_recycler_view) }
+    private val layoutManager: LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
+    private val pullRequestProgressBar: ProgressBar by lazy { findViewById(R.id.pull_request_progress_bar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pull_request_list)
 
         setUpRecyclerView()
-        setUpProgressBar()
         setUpObserver()
         repository = intent.getParcelableExtra(REPOSITORY_KEY)
     }
@@ -37,8 +36,6 @@ class PullRequestListActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerView() {
-        pullRequestRecyclerView = findViewById(R.id.pull_request_recycler_view)
-        layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         pullRequestRecyclerView.setHasFixedSize(true)
         pullRequestRecyclerView.layoutManager = layoutManager
         pullRequestRecyclerView.adapter = adapter
@@ -50,10 +47,6 @@ class PullRequestListActivity : AppCompatActivity() {
             adapter.updatePullRequest(it)
         }
         )
-    }
-
-    private fun setUpProgressBar() {
-        pullRequestProgressBar = findViewById(R.id.pull_request_progress_bar)
     }
 
     companion object {
