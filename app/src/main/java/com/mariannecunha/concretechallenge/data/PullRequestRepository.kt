@@ -1,0 +1,20 @@
+package com.mariannecunha.concretechallenge.data
+
+import com.github.kittinunf.result.coroutines.SuspendableResult
+import com.mariannecunha.concretechallenge.model.PullRequest
+import com.mariannecunha.concretechallenge.model.Repository
+import java.lang.Exception
+
+class PullRequestRepository(private val service: PullRequestService) {
+
+    suspend fun fetchPullRequests(repository: Repository?): List<PullRequest>? {
+        val username = repository!!.owner.login
+        val repoName = repository.name
+        val result: SuspendableResult<List<PullRequest>, Exception> =
+            SuspendableResult.of {
+                service.fetchPullRequests(username, repoName)
+            }
+
+        return result.component1()
+    }
+}

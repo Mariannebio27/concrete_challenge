@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/repository_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="Repository Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2f7096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repository_description_text_view"
+        android:layout_width="249dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Description"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/repository_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/repository_name_text_view" />
+
+    <TextView
+        android:id="@+id/fork_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textColor="#edaf1c"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fork_image_view"
+        app:layout_constraintTop_toTopOf="@+id/fork_image_view" />
+
+    <TextView
+        android:id="@+id/star_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textColor="#edaf1c"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/star_image_view"
+        app:layout_constraintTop_toTopOf="@+id/star_image_view" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/owner_image_view"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_marginRight="25dp"
+        app:civ_border_width="2dp"
+        android:layout_marginTop="25dp"
+        app:civ_border_color="#FFffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/username_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="username"
+        android:textColor="#68b7d9"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/owner_image_view"
+        app:layout_constraintStart_toStartOf="@+id/owner_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/owner_image_view" />
+
+    <ImageView
+        android:id="@+id/fork_image_view"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repository_description_text_view"
+        app:srcCompat="@drawable/fork_icon" />
+
+    <ImageView
+        android:id="@+id/star_image_view"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/fork_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/repository_description_text_view"
+        app:srcCompat="@drawable/star_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
