@@ -2,7 +2,6 @@ package com.mariannecunha.concretechallenge.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.renderscript.ScriptGroup
 import android.view.View
 import android.widget.ProgressBar
 import androidx.lifecycle.Observer
@@ -33,7 +32,7 @@ class RepositoryListActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        viewModel.fetchRepositories()
+        viewModel.getRepositories()
     }
 
     private fun setUpRecyclerView() {
@@ -46,7 +45,7 @@ class RepositoryListActivity : AppCompatActivity() {
             layoutManager = layoutManager,
             methodToInvokeAtEnd = {
                 repositoryProgressBar.visibility = View.VISIBLE
-                viewModel.fetchRepositories()
+                viewModel.getRepositories()
             }
         )
     }

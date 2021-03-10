@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.model
+package com.mariannecunha.concretechallenge.domain.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

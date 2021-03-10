@@ -1,7 +1,6 @@
 package com.mariannecunha.concretechallenge.data
 
-import com.mariannecunha.concretechallenge.model.GlobalRepository
-import com.mariannecunha.concretechallenge.model.PullRequest
+import com.mariannecunha.concretechallenge.domain.model.PullRequest
 import retrofit2.http.GET
 import retrofit2.http.Path
 

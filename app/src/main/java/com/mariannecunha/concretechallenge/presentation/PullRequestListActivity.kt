@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariannecunha.concretechallenge.R
-import com.mariannecunha.concretechallenge.model.Repository
+import com.mariannecunha.concretechallenge.domain.model.Repository
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -34,7 +33,7 @@ class PullRequestListActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.fetchPullRequests(repository)
+        viewModel.getPullRequests(repository)
     }
 
     private fun setUpRecyclerView() {

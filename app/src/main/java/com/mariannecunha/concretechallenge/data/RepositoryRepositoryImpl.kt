@@ -1,15 +1,16 @@
 package com.mariannecunha.concretechallenge.data
 
 import com.github.kittinunf.result.coroutines.SuspendableResult
-import com.mariannecunha.concretechallenge.model.GlobalRepository
-import com.mariannecunha.concretechallenge.model.Repository
+import com.mariannecunha.concretechallenge.domain.model.GlobalRepository
+import com.mariannecunha.concretechallenge.domain.model.Repository
+import com.mariannecunha.concretechallenge.domain.repository.RepositoryRepository
 import java.lang.Exception
 
-class RepositoryRepository(private val service: RepositoryService) {
+class RepositoryRepositoryImpl(private val service: RepositoryService) : RepositoryRepository {
 
     private var currentPageNumber = 1
 
-    suspend fun fetchRepositories(): List<Repository>? {
+    override suspend fun fetchRepositories(): List<Repository>? {
 
         val result: SuspendableResult<GlobalRepository, Exception> =
             SuspendableResult.of {

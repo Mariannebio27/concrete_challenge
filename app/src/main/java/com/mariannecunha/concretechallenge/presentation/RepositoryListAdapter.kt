@@ -8,10 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mariannecunha.concretechallenge.R
-import com.mariannecunha.concretechallenge.model.Repository
+import com.mariannecunha.concretechallenge.domain.model.Repository
 import com.mariannecunha.concretechallenge.presentation.PullRequestListActivity.Companion.REPOSITORY_KEY
 import de.hdodenhof.circleimageview.CircleImageView
-import java.io.ObjectOutputStream
 
 class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.RepositoryListViewHolder>() {
 

@@ -1,9 +1,11 @@
 package com.mariannecunha.concretechallenge.data.di
 
-import com.mariannecunha.concretechallenge.data.PullRequestRepository
+import com.mariannecunha.concretechallenge.data.PullRequestRepositoryImpl
 import com.mariannecunha.concretechallenge.data.PullRequestService
-import com.mariannecunha.concretechallenge.data.RepositoryRepository
+import com.mariannecunha.concretechallenge.data.RepositoryRepositoryImpl
 import com.mariannecunha.concretechallenge.data.RepositoryService
+import com.mariannecunha.concretechallenge.domain.repository.PullRequestRepository
+import com.mariannecunha.concretechallenge.domain.repository.RepositoryRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -14,15 +16,15 @@ import java.util.concurrent.TimeUnit
 val dataModule = module {
 
     factory {
-        PullRequestRepository(
+        PullRequestRepositoryImpl(
             get<PullRequestService>()
-        )
+        ) as PullRequestRepository
     }
 
     factory {
-        RepositoryRepository(
+        RepositoryRepositoryImpl(
             get<RepositoryService>()
-        )
+        ) as RepositoryRepository
     }
 
     factory {

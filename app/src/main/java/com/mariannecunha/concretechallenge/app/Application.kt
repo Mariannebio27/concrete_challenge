@@ -3,6 +3,7 @@ package com.mariannecunha.concretechallenge.app
 import android.app.Application
 import com.mariannecunha.concretechallenge.BuildConfig
 import com.mariannecunha.concretechallenge.data.di.dataModule
+import com.mariannecunha.concretechallenge.domain.di.domainModule
 import com.mariannecunha.concretechallenge.presentation.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -25,7 +26,8 @@ class Application : Application() {
             modules(
                 listOf(
                     presentationModule,
-                    dataModule
+                    dataModule,
+                    domainModule
                 )
             )
         }
