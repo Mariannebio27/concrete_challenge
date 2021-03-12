@@ -17,9 +17,9 @@ class PullRequestListActivity : AppCompatActivity() {
     private val viewModel by viewModel<PullRequestListViewModel>()
     private val adapter by inject<PullRequestListAdapter>()
     private var repository: Repository? = null
-    private val pullRequestRecyclerView: RecyclerView by lazy { findViewById(R.id.pull_request_recycler_view) }
+    private val pullRequestRecyclerView by lazy { findViewById<RecyclerView>(R.id.pull_request_recycler_view) }
     private val layoutManager: LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
-    private val pullRequestProgressBar: ProgressBar by lazy { findViewById(R.id.pull_request_progress_bar) }
+    private val pullRequestProgressBar by lazy { findViewById<ProgressBar>(R.id.pull_request_progress_bar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

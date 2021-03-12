@@ -16,9 +16,9 @@ class RepositoryListActivity : AppCompatActivity() {
 
     private val viewModel by viewModel<RepositoryListViewModel>()
     private val adapter by inject<RepositoryListAdapter>()
-    private val repositoryRecyclerView: RecyclerView by lazy { findViewById(R.id.repository_recycler_view) }
+    private val repositoryRecyclerView by lazy { findViewById<RecyclerView>(R.id.repository_recycler_view) }
     private val layoutManager: LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
-    private val repositoryProgressBar: ProgressBar by lazy { findViewById(R.id.repository_progress_bar) }
+    private val repositoryProgressBar by lazy { findViewById<ProgressBar>(R.id.repository_progress_bar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
