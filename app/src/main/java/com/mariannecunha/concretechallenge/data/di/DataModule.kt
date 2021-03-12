@@ -48,8 +48,6 @@ val dataModule = module {
     factory {
         createOkHttpClient()
     }
-
-
 }
 
 private fun createPullRequestService(retrofit: Retrofit): PullRequestService {
