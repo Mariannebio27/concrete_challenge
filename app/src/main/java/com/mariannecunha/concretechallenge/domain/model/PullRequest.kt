@@ -1,9 +1,9 @@
 package com.mariannecunha.concretechallenge.domain.model
 
 import com.google.gson.annotations.SerializedName
-import java.util.*
+import java.util.Date
 
-data class PullRequest (
+data class PullRequest(
     @SerializedName("html_url") val url: String,
     val title: String,
     val user: User,

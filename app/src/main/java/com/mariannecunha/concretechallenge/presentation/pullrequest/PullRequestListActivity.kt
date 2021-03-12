@@ -1,9 +1,9 @@
 package com.mariannecunha.concretechallenge.presentation.pullrequest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -42,10 +42,12 @@ class PullRequestListActivity : AppCompatActivity() {
     }
 
     private fun setUpObserver() {
-        viewModel.pullsLiveData.observe(this, Observer {
-            pullRequestProgressBar.visibility = View.GONE
-            adapter.updatePullRequest(it)
-        }
+        viewModel.pullsLiveData.observe(
+            this,
+            Observer {
+                pullRequestProgressBar.visibility = View.GONE
+                adapter.updatePullRequest(it)
+            }
         )
     }
 

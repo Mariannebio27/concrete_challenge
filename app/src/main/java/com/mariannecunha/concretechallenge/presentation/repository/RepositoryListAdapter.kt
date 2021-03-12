@@ -24,7 +24,7 @@ class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.Repos
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryListViewHolder {
-        val itemView : View =
+        val itemView: View =
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.repository_list_item, parent, false)
 
@@ -50,7 +50,6 @@ class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.Repos
         private val forks = itemView.findViewById<TextView>(R.id.fork_text_view)
         private val image = itemView.findViewById<CircleImageView>(R.id.owner_image_view)
 
-
         fun itemBind(repository: Repository) {
 
             repoName.text = repository.name
@@ -64,7 +63,6 @@ class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.Repos
                 .into(image)
 
             setUpGoToRepository(repository)
-
         }
 
         private fun setUpGoToRepository(repository: Repository) {
@@ -74,8 +72,6 @@ class RepositoryListAdapter() : RecyclerView.Adapter<RepositoryListAdapter.Repos
                 }
                 itemView.context.startActivity(intent)
             }
-
         }
     }
-
 }

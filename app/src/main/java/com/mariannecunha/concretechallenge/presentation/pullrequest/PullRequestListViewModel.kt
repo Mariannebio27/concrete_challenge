@@ -10,7 +10,7 @@ import com.mariannecunha.concretechallenge.domain.usecase.FetchPullRequests
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class PullRequestListViewModel(private val fetchPullRequests : FetchPullRequests) : ViewModel() {
+class PullRequestListViewModel(private val fetchPullRequests: FetchPullRequests) : ViewModel() {
 
     private val _pullsLiveData = MutableLiveData<List<PullRequest>>()
     val pullsLiveData: LiveData<List<PullRequest>> = _pullsLiveData

@@ -1,16 +1,14 @@
 package com.mariannecunha.concretechallenge.presentation.repository
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariannecunha.concretechallenge.R
 import com.mariannecunha.concretechallenge.extension.setupScroll
-import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListAdapter
-import com.mariannecunha.concretechallenge.presentation.repository.RepositoryListViewModel
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,7 +17,7 @@ class RepositoryListActivity : AppCompatActivity() {
     private val viewModel by viewModel<RepositoryListViewModel>()
     private val adapter by inject<RepositoryListAdapter>()
     private val repositoryRecyclerView: RecyclerView by lazy { findViewById(R.id.repository_recycler_view) }
-    private val layoutManager : LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
+    private val layoutManager: LinearLayoutManager by lazy { LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false) }
     private val repositoryProgressBar: ProgressBar by lazy { findViewById(R.id.repository_progress_bar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,9 +48,12 @@ class RepositoryListActivity : AppCompatActivity() {
     }
 
     private fun setUpObserver() {
-        viewModel.productsLiveData.observe(this, Observer {
-            repositoryProgressBar.visibility = View.GONE
-            adapter.updateRepository(it)
-        })
+        viewModel.productsLiveData.observe(
+            this,
+            Observer {
+                repositoryProgressBar.visibility = View.GONE
+                adapter.updateRepository(it)
+            }
+        )
     }
 }

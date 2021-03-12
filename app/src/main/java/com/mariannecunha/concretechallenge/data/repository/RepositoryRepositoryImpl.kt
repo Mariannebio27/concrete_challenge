@@ -24,5 +24,4 @@ class RepositoryRepositoryImpl(private val service: RepositoryService) : Reposit
     private fun updatePage() {
         currentPageNumber += 1
     }
-
 }

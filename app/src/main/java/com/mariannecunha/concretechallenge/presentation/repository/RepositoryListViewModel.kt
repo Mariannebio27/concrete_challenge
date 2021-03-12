@@ -9,12 +9,12 @@ import com.mariannecunha.concretechallenge.domain.usecase.FetchRepositories
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class RepositoryListViewModel(private val fetchRepositories: FetchRepositories): ViewModel() {
+class RepositoryListViewModel(private val fetchRepositories: FetchRepositories) : ViewModel() {
 
     private val _productsLiveData = MutableLiveData<List<Repository>>()
     val productsLiveData: LiveData<List<Repository>> = _productsLiveData
 
-    fun getRepositories(){
+    fun getRepositories() {
         viewModelScope.launch(Dispatchers.IO) {
             val products = fetchRepositories()
             _productsLiveData.postValue(products)

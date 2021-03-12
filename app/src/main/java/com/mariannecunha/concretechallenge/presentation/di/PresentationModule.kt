@@ -30,6 +30,4 @@ val presentationModule = module {
     factory {
         RepositoryListAdapter()
     }
-
-
 }

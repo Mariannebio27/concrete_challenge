@@ -9,4 +9,3 @@ class FetchRepositories(private val repository: RepositoryRepository) {
         return repository.fetchRepositories()
     }
 }
-

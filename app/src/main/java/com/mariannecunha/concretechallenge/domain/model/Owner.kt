@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Owner (
+data class Owner(
     val login: String,
     @SerializedName("avatar_url") val avatarUrl: String
 ) : Parcelable

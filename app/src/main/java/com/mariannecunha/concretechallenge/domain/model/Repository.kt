@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Repository (
+data class Repository(
     val name: String,
     val description: String,
     @SerializedName("stargazers_count") val stargazersCount: Int,
-    @SerializedName("forks_count")  val forksCount: Int,
+    @SerializedName("forks_count") val forksCount: Int,
     val owner: Owner
 ) : Parcelable

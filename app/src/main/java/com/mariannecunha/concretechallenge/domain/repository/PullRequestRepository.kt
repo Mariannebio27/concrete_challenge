@@ -6,5 +6,4 @@ import com.mariannecunha.concretechallenge.domain.model.Repository
 interface PullRequestRepository {
 
     suspend fun fetchPullRequests(repository: Repository?): List<PullRequest>?
-
 }

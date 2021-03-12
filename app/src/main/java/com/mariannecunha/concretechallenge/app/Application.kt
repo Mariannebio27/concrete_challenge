@@ -6,11 +6,10 @@ import com.mariannecunha.concretechallenge.data.di.dataModule
 import com.mariannecunha.concretechallenge.domain.di.domainModule
 import com.mariannecunha.concretechallenge.presentation.di.presentationModule
 import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
 import org.koin.android.logger.AndroidLogger
+import org.koin.core.context.startKoin
 import org.koin.core.logger.EmptyLogger
 import org.koin.core.logger.Logger
-
 
 class Application : Application() {
     override fun onCreate() {

@@ -6,7 +6,7 @@ import com.mariannecunha.concretechallenge.domain.model.Repository
 import com.mariannecunha.concretechallenge.domain.repository.PullRequestRepository
 import java.lang.Exception
 
-class PullRequestRepositoryImpl(private val service: PullRequestService): PullRequestRepository {
+class PullRequestRepositoryImpl(private val service: PullRequestService) : PullRequestRepository {
 
     override suspend fun fetchPullRequests(repository: Repository?): List<PullRequest>? {
         val username = repository!!.owner.login
