@@ -1,4 +1,4 @@
-package com.mariannecunha.concretechallenge.presentation.repository
+package com.mariannecunha.concretechallenge.presentation.repositorylist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
